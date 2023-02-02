@@ -1,4 +1,4 @@
-def mayor_poblacion(d: dict) -> dict[str, dict[dict[str, int], dict[str, int]]]:
+def mayor_poblacion(d: dict) -> dict:
     '''
         iteramos sobre el diccionario de continentes para localizar al que tenga
         mayor poblacion, la categoria [Desconocido] no se contabiliza en esta ocasion
@@ -24,7 +24,7 @@ def mayor_poblacion(d: dict) -> dict[str, dict[dict[str, int], dict[str, int]]]:
     }
 
 
-def idioma_mas_hablado(d: dict):
+def idioma_mas_hablado(d: dict) -> dict:
     '''
         iteramos sobre el idioma de cada pais para obtener el mas hablado en todo el mundo y 
         por continente, solo en el primer caso tambien tenemos en cuenta a [Desconocido]
@@ -73,7 +73,7 @@ def idioma_mas_hablado(d: dict):
     return r
 
 
-def moneda_mas_usada(d: dict):
+def moneda_mas_usada(d: dict) -> dict:
     '''
         iteramos sobre cada pais y obtenemos la moneda mas usada en todo el mundo
     '''

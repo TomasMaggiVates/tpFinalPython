@@ -5,7 +5,10 @@ import json
 from classes.class_continente import Continente
 from classes.class_pais import Pais
 
+# ruta de la carpeta de donde leer los jsons
 DEFAULT_IN = 'in/'
+
+# ruta de la carpeta a generar para escribir dentro el json con las respuestas
 DEFAULT_OUT = 'out/'
 
 
