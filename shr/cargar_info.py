@@ -116,4 +116,4 @@ def guardar(l: list) -> None:
         guardamos las respuestas en un json
     '''
     with open(DEFAULT_OUT + 'respuestas.json', 'w') as f:
-        json.dump(l, f)
+        json.dump(l, f, indent=2)
