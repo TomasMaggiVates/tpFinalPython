@@ -45,6 +45,7 @@ def parse_jsons() -> dict:
     # solo se contabilizan con las categorias que posean
     d = {'Desconocido': {}}
 
+    # nos vamos a basar en el json de paises y contientes para organizar la info sobre los paises
     with open(DEFAULT_IN + 'country-by-continent.json', 'r') as f:
         l = json.load(f)
 
@@ -59,6 +60,9 @@ def parse_jsons() -> dict:
                 d[i['continent']] = {}
                 d[i['continent']][i['country']] = {}
 
+    # rellenamos los paises con su informacion situada en los demas jsons
+
+    # podemos 'automatizar' un poco el proceso de esta forma
     archivos = ['country-by-currency-code.json',
                 'country-by-languages.json',
                 'country-by-population.json']
@@ -89,6 +93,9 @@ def cargar_paises(d: dict) -> list[Continente]:
 
     for continente, paises in d.items():
         l = []
+
+        # si leemos una propiedad que no existe en el diccionario es porque esa info no existe
+        # por lo tanto la colocamos como None
         for pais, info in paises.items():
             p = Pais(pais)
             try:
