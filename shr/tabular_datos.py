@@ -8,7 +8,7 @@ def mayor_poblacion(d: dict) -> dict:
 
     for nombre, objeto in d.items():
 
-        # no sabemos su continente asique no los computamos
+        # en caso de que no sepamos el contiente del pais este no se computa
         if nombre == 'Desconocido':
             continue
 
